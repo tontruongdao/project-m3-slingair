@@ -61,3 +61,30 @@ What follows is what information that I have been given related to the backend (
 | `GET` | `/slingair/flights/:flight` | returns info on a specific flight
 | `GET` | `/slingair/users` | returns an array of all users. Accepts query params of `limit` and `start` for pagination. _If values are not provided, it will return the first 10 users_
 | `POST` | `/slingair/users` | creates a new user/reservation
+
+<!-- TD -->
+
+Day 1
+
+- Transfered index.html to index.ejs for rendering flight list
+- Added 'seat-select' endpoint and 'handleHomepage'
+- Modified handleFlight function
+- Replaced 'Input' tag for 'Select' tag and added 'forEach' flight for rendering.
+
+Day2
+
+- Debugged 'seat-select' file,
+  1. added data as un argument and moved "renderSeats(data)" in the bracket.
+  2. added "data" in "renderSeat", line 7(console.log to verify if data is fetched)
+  3. Added find method and logic to render the seat availability.
+- Added confirmed and view-reservation endpoints
+- Added POST request in BE and "handleConfirmSeat" in seat-select.js
+
+Day 3
+
+- Added "GET" user end point and redirected to the confirmed endpoint.
+- Input was saved and rendered in the "confirmed.ejs" with client ID.
+
+* To do
+  1. Render that endpoint with the new information.
+  2. Write the ID reservation page.

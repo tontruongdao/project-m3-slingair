@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=0, minimal-ui" />
-        <link rel="stylesheet" type="text/css" href="seat-select/css/styles.css" />
+        <link rel="stylesheet" type="text/css" href="/seat-select/css/styles.css" />
         <title>Confirmed!</title>
     </head>
     <body>
@@ -16,7 +16,7 @@
                     <p class="message">Your flight is confirmed!</p>
                     <ul class="user-info">
                         <li>Flight #:<span id="flight"></span> seat #: <span id="seat"></span></li>
-                        <li>Name:<span id="name"></span></li>
+                        <li>Name:<span id="name"><%= flightInfo.givenName %></span></li>
                         <li>Email:<span id="email"></span></li>
                     </ul>
                 </div>
@@ -24,6 +24,6 @@
             </div>
         </div>
         <p class='footer-logo'>The only way to fly!</p>
-        <script src="seat-select/js/confirmed.js"></script>
+        <script src="/seat-select/js/confirmed.js"></script>
     </body>
 </html>
