@@ -116,22 +116,6 @@ const handleConfirmSeat = (event) => {
       window.location = `/seat-select/confirmed/${client.id}`;
       // Redirects to the confirmed endpoint with the client's ID as a variable.
     });
-
-  // return getData().then((res) => console.log(res));
-  // fetch('/users', {
-  //   method: 'POST',
-  //   body: JSON.stringify({
-  //     flight: flightInput.value, // Include in "body" JSON to match object in reservation.js
-  //     seat: selection, // Include in "body" JSON to match object in reservation.js
-  //     givenName: document.getElementById('givenName').value, // Already there
-  //     surname: inputSurname.value, // Added to post Surname
-  //     email: inputEmail.value, // Added to Post Email
-  //   }),
-  //   headers: {
-  //     Accept: 'application/json',
-  //     'Content-Type': 'application/json',
-  //   },
-  // });
 };
 
 // Function used to POST and GET fetch data from the form.

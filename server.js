@@ -35,19 +35,17 @@ const handleHomepage = (req, res) => {
 
 //
 const handleConfirmed = (req, res) => {
-  // console.log(__dirname);
-  //res.sendFile(__dirname + '/public/seat-select/confirmed.html');
   // res.send('confirmed');
   let info = req.params.id;
   console.log(info);
   let data = reservations.find((res) => res.id == info);
   console.log(data);
   res.status(200).render('confirmed', { flightInfo: data });
-};
+}; //
 
 const handleViewReservation = (req, res) => {
-  res.sendFile(__dirname + '/public/seat-select/view-reservation.html');
-  // res.send('view-reservation');
+  // res.send('view-reservation')
+  res.render('view-reservation');
 }; //
 
 // Handlers
@@ -74,6 +72,7 @@ express()
   .get('/users', function (req, res) {
     console.log('Sending INFO!!');
     res.status(200).send(reservations);
+    console.log(reservations);
   }) // Returns
 
   // This posts the input from the form into the reservations potion.
@@ -95,11 +94,20 @@ express()
 
     reservations.push(data);
     console.log(reservations);
+
+    // Code to update seating for the new confirmed reservation.
+    const chosenSeat = flights[data.flight].find(
+      (seat) => seat.id === data.seat
+    );
+    // returns item in the array from "flightSeatings.js"
+    chosenSeat.isAvailable = false;
+    //
+
     res.status(200).send('Post request received');
     // This portion pushes data from form to the imported reservations.
   })
 
-  .get('/seat-select/confirmed/:id', handleConfirmed) //
+  .get('/seat-select/confirmed/:id', handleConfirmed) // The ":id" is the variable  we used to have a unique endpoint for each entry
   .get('/view-reservation', handleViewReservation) //
   .use((req, res) => res.send('Not Found'))
   .listen(PORT, () => console.log(`Listening on port ${PORT}`));

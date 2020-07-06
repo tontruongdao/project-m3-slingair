@@ -62,7 +62,7 @@ What follows is what information that I have been given related to the backend (
 | `GET` | `/slingair/users` | returns an array of all users. Accepts query params of `limit` and `start` for pagination. _If values are not provided, it will return the first 10 users_
 | `POST` | `/slingair/users` | creates a new user/reservation
 
-<!-- TD -->
+## Substitute Programmer Notes (TD)
 
 Day 1
 
@@ -85,6 +85,15 @@ Day 3
 - Added "GET" user end point and redirected to the confirmed endpoint.
 - Input was saved and rendered in the "confirmed.ejs" with client ID.
 
-* To do
-  1. Render that endpoint with the new information.
-  2. Write the ID reservation page.
+Day 4
+
+- Rendered remainder of "reservation" information in "confirmed.ejs"
+- Did "view-reservation" endpoint end EJS, connected to the public CSS and JS files.
+- Recycled email "input" tag and button from "seat-select.ejs" into "view-reservation.ejs"
+- Recycled the "seat-select" promises code to completed the "view-reservation" JS file.
+- Did last test for Marty McFly and new entry, it works!
+
+Day 5
+
+- Update seat-selection with the new reservation
+- Ask for a raise.

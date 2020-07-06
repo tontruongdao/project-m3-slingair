@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=0, minimal-ui" />
+        <link rel="stylesheet" type="text/css" href="/seat-select/css/styles.css" />
+        <title>View Reservation</title>
+    </head>
+    <body>
+        <div class='main'>
+            <header class='header'>
+                <h1 class='header-logo'>Air Slingshot</h1>
+            </div>
+            <div class="content">
+
+            </div>
+        </div>
+        <p class='footer-logo'>The only way to fly!</p>
+        <h2 id='flight-name'>Select your seat and Provide your information!</h2>
+        <br>
+                <form id="seats" class="content" name="salesForm" onsubmit="handleReservation(event)">
+                    <div class="form-content user">
+                        <div class='form-item'>
+                            <label for="email">Email</label>
+                            <input id="email" type="email" name="email" placeholder="Your email" required />
+                        </div>
+                        <button class='button confirm' id='confirm-button' type="submit">
+                            <div class="lds-dual-ring"></div>
+                            Confirm<span id="seat-number"></span>
+                        </button>
+                    </div>
+                </form>
+        <script src="seat-select/js/view-reservation.js"></script>
+    </body>
+</html>
